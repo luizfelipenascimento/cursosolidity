@@ -69,7 +69,7 @@ contract Aluguel {
     
     
     function receberPagamento() public payable {
-        require(msg.sender == owner, "Somente o Locatario do contrato pode fazer o pagamento");
+        require(msg.sender == contaLocatario, "Somente o Locatario do contrato pode fazer o pagamento");
         require(msg.value>=valor, "Valor insuficiente");
         contaLocador.transfer(msg.value);
         statusPagamento.push(true);
