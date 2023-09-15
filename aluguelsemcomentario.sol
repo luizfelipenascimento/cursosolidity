@@ -4,8 +4,7 @@ SPDX-License-Identifier: CC-BY-4.0
 This work is licensed under a Creative Commons Attribution 4.0 International License.
 */
 
-// hash do contrato: 0x015FCDf25A1c3140F753A0852f34C0C604bf7A6a
-// valor do contrato 0.01 eth
+// endereço do contrato: 0x015FCDf25A1c3140F753A0852f34C0C604bf7A6a
 
 pragma solidity 0.8.19;
 
@@ -22,7 +21,7 @@ contract Aluguel {
     3 - 04/2020 = true
     */
     address payable public contaLocador;
-    address public owner;
+    address public contaLocatario;
 
     constructor(    string memory _nomeLocador, 
                     string memory _nomeLocatario, 
@@ -32,7 +31,7 @@ contract Aluguel {
         locatario = _nomeLocatario;
         valor = _valorDoAluguel;
         contaLocador = _contaLocador;
-        owner = msg.sender;
+        contaLocatario = msg.sender;
     }
  
     function valorAtualDoAluguel() public view returns (uint256) {
