@@ -2,7 +2,7 @@
 
 pragma solidity 0.8.19;
 
-contract Custodia {
+contract CustodiaExemplo {
     string public hashContaCliente;
 
     constructor (string memory _hashContaCliente) {
