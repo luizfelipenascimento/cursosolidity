@@ -4,7 +4,7 @@ pragma solidity 0.8.19;
 
 import "contracts/tcc/bradesco_token_aberto.sol";
 
-// endereco do contrato na rede sepolia: 0x0882572559A3E2b4f349d4ee387902dfBa458f6c
+// endereco do contrato na rede sepolia: 0x2CeB3Ea472f82799bFEc46038D358472BA324630
 
 contract Custodia {
 
