@@ -34,7 +34,7 @@ contract Custodia {
 
   function transfereToken(uint256 valor, address payable recebedor) public payable {
     require(valor <= exercicioToken.balanceOf(address(this)), "saldo TokenExercicio insuficiente");
-    recebedor.transfer(valor);
+    exercicioToken.transfer(recebedor, valor);
   }
 
   function meuSaldoEther() public view returns (uint256) {
